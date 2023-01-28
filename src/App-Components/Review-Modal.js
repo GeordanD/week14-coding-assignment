@@ -15,12 +15,14 @@ import ListGroupItem from "react-bootstrap/esm/ListGroupItem";
 export default function ReviewModal(props) {
     const [show, setShow] = useState(false);
     const [reviewList, setReviewList] = useState([
-        {
+      {
+            id: 1,
             name: 'Geordan',
             info: 'This movie was a highlight of my childhood I spent all my time as a kid watching these movies and really enjoyed them as a child.',
             star: '5★',
         },
-        {
+      {
+            id: 2,
             name: 'Courtney',
             info: 'This movie was a wonder',
             star: '1★',
@@ -55,14 +57,14 @@ export default function ReviewModal(props) {
     }
 
   //TODO This function builds all the reviews that are going to be displayed
-    function AllReviews(props) {
+  function AllReviews() {
         const itemList = reviewList.map((review) => (
           <>
             <hr></hr>
             <ListGroup variant="flush">
-              <ListGroupItem key={review.index} variant="success">{review.name}</ListGroupItem>
-              <ListGroupItem key={review.index} variant="info">{review.info}</ListGroupItem>
-              <ListGroupItem key={review.index} variant="warning">Star Rating: {review.star}</ListGroupItem>
+              <ListGroupItem  variant="success">{review.name}</ListGroupItem>
+              <ListGroupItem  variant="info">{review.info}</ListGroupItem>
+              <ListGroupItem variant="warning"> {review.star}</ListGroupItem>
            </ListGroup>
           </>
         ));
@@ -126,7 +128,7 @@ export default function ReviewModal(props) {
           <b><strong>Reviews</strong></b>
         </h3>
         <div>
-          <AllReviews />
+          <AllReviews key={reviewList.id} />
         </div>
       </Modal>
     </>
