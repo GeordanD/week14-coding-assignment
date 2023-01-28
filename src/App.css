@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  margin-top: 30px;
-  background-color:burlywood;
+  background-color: grey;
+
 }
 
 .card-container {
@@ -10,20 +10,23 @@
   position: relative;
   margin:auto;
   justify-content: space-evenly;
-  filter: drop-shadow(3px 2px 3px rgb(41, 126, 238));
+  filter: drop-shadow(3px 2px 3px rgb(235, 236, 238));
+  color: rgb(233, 230, 226);
 }
 .cardText {
-  margin: auto;
+  margin-top: -6px;
   padding: 20px;
-  background-color: rgb(57, 241, 134);
+  background-color: rgb(182, 94, 11);
   position: absolute;
   opacity: 0;
-  width: 240px;
-  height: 340px;
+  width: 320px;
+  height: 455px;
   overflow: auto;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-radius:  .65rem;
   transition: all 300ms ease-in-out;
+  text-align: left;
+  
+  
 }
 .cardBox {
   display: flex;
@@ -37,6 +40,11 @@
 
 .cardBox:hover .cardText {
   opacity: 1;
+}
+
+.cardImg {
+  max-height: 450px;
+  min-height: 450px;
 }
 
 .App-logo {
@@ -73,3 +81,34 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  background-color: transparent;
+}
+
+.navBar {
+  background-color: #213aa5;
+  text-align: left;
+}
+
+.card {
+  border: solid rgb(118, 118, 211) 3px;
+  border-radius: 2rem;
+  padding-top: 1px;
+  background-color: rgba(219, 121, 55, 0.65);
+  padding-bottom: 20px;
+  
+}
+
+.reviewBtn {
+  height: 30px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.card-title {
+  color:#282c34
+}
+
+
+
