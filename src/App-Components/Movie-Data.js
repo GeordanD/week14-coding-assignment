@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card"
-import ReviewModal from "./Review-Form";
+import ReviewModal from "./Review-Modal";
 
 
 
@@ -14,11 +14,14 @@ export default class MovieData extends React.Component {
             releaseYear: props.movie.releaseYear,
             bio: props.movie.bio
             
-    }};
+        }
+    };
+    
+    //TODO This is the entire movies portion of the app it takes props from each movie in the movie list object.
     render(){
     return (
      
-        <Card style={{ width: "320px", margin: "2rem 1rem" }}>
+        <Card>
             <div className="cardBox">
                 <Card.Img variant="top" className="cardImg" src={this.state.img} width="200" alt={this.state.movieTitle} />
                 <Card.Text className="cardText">{this.state.bio}</Card.Text>

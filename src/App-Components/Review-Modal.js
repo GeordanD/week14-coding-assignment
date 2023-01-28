@@ -17,13 +17,13 @@ export default function ReviewModal(props) {
     const [reviewList, setReviewList] = useState([
         {
             name: 'Geordan',
-            info: 'This movie was a highlight of my childhood I spent all my time as a kid watching these movies and really enjoyed them as a child. I cant wait to develope my own app and get to making websites on the side while i take the back end course ',
+            info: 'This movie was a highlight of my childhood I spent all my time as a kid watching these movies and really enjoyed them as a child.',
             star: '5★',
         },
         {
             name: 'Courtney',
-            info: 'Bananas are a better pass time',
-            star: '4.5★',
+            info: 'This movie was a wonder',
+            star: '1★',
         }
     ]);
 
@@ -41,6 +41,7 @@ export default function ReviewModal(props) {
         starRating.push(newRating)
     }
 
+  //TODO This function gives my button the submit the review into the review list.
     function saveNewReviewButton() {
         setReviewList(current => [...current, {
             name: name.current.value,
@@ -53,6 +54,7 @@ export default function ReviewModal(props) {
         starRating = [];
     }
 
+  //TODO This function builds all the reviews that are going to be displayed
     function AllReviews(props) {
         const itemList = reviewList.map((review) => (
           <>
@@ -81,11 +83,11 @@ export default function ReviewModal(props) {
 
 
 
-
+//TODO This is my entire Modal to enter a review
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Reviews
+      <Button variant="success" onClick={handleShow}>
+        Movie Reviews
       </Button>
 
       <Modal show={show} onHide={handleClose}>
