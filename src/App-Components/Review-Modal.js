@@ -25,7 +25,7 @@ export default function ReviewModal(props) {
             id: 2,
             name: 'Courtney',
             info: 'This movie was a wonder',
-            star: '1★',
+            star: '4.5★',
         }
     ]);
 
